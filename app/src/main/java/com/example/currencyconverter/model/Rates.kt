@@ -1,4 +1,4 @@
-package com.example.currencyconverter.data
+package com.example.currencyconverter.model
 
 data class Rates(
     val AED: Double,

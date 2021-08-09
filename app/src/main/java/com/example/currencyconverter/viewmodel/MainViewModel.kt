@@ -1,11 +1,11 @@
-package com.example.currencyconverter.ViewModel
+package com.example.currencyconverter.viewmodel
 
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.currencyconverter.DispatcherProvider
-import com.example.currencyconverter.Repository.MainRepository
-import com.example.currencyconverter.data.Rates
+import com.example.currencyconverter.dispatcher.DispatcherProvider
+import com.example.currencyconverter.repository.MainRepository
+import com.example.currencyconverter.model.Rates
 import com.example.currencyconverter.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 

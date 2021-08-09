@@ -1,12 +1,12 @@
-package com.example.currencyconverter.Repository
+package com.example.currencyconverter.repository
 
-import com.example.currencyconverter.data.CurrencyApi
-import com.example.currencyconverter.data.CurrencyResponse
+import com.example.currencyconverter.network.CurrencyApi
+import com.example.currencyconverter.model.CurrencyResponse
 import com.example.currencyconverter.utils.Resource
 import javax.inject.Inject
 
 class DefaultRepository @Inject constructor(
-    private val Api:CurrencyApi
+    private val Api: CurrencyApi
 ):MainRepository {
     override suspend fun getRates(base: String): Resource<CurrencyResponse> {
         return try {

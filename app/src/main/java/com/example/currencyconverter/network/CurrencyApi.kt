@@ -1,5 +1,6 @@
-package com.example.currencyconverter.data
+package com.example.currencyconverter.network
 
+import com.example.currencyconverter.model.CurrencyResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

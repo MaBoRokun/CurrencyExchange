@@ -1,10 +1,10 @@
 package com.example.currencyconverter.module
 
-import com.example.currencyconverter.DispatcherProvider
-import com.example.currencyconverter.Repository.DefaultRepository
-import com.example.currencyconverter.Repository.MainRepository
+import com.example.currencyconverter.dispatcher.DispatcherProvider
+import com.example.currencyconverter.repository.DefaultRepository
+import com.example.currencyconverter.repository.MainRepository
 import com.example.currencyconverter.utils.Credentials
-import com.example.currencyconverter.data.CurrencyApi
+import com.example.currencyconverter.network.CurrencyApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -31,11 +31,11 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun ProvideMainRepository(api:CurrencyApi):MainRepository = DefaultRepository(api)
+    fun ProvideMainRepository(api: CurrencyApi):MainRepository = DefaultRepository(api)
 
     @Singleton
     @Provides
-    fun ProvideDispatcher():DispatcherProvider = object : DispatcherProvider{
+    fun ProvideDispatcher(): DispatcherProvider = object : DispatcherProvider {
         override val main: CoroutineDispatcher
             get() = Dispatchers.Main
         override val io: CoroutineDispatcher
